@@ -1,0 +1,256 @@
+/*core styles*/
+
+body {
+	margin:0;
+	font-family: Ariel, Helvetica, sans-serif;
+	background:rgb(255, 255, 255);
+	color:#475b63;
+	font-size:1.1em;
+	line-height: 1.5;
+	text-align:center;
+}
+
+img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+#section-b2 img {
+	display: block;
+	width: 40%;
+	margin: auto;
+}
+
+h1, h2, h3 {
+	margin: 0;
+	padding: 1em 0;
+	font-size: 2.2rem;
+}
+h2, h3 {
+	color: #4ab4df
+}
+#section-c h2 {
+	color: #475b63;
+}
+
+p {
+	margin: 0;
+	padding: 1em 0;
+	color: #2d7998;
+}
+
+.white-text {
+	font-size: 1.6rem;
+	color: white;
+}
+
+.btn {
+	display: inline-block;
+	background: #fff;
+	color: #333;
+	text-decoration: none;
+	padding: 1em 2em;
+	border: 3px outset #666;
+	margin: .5em 0;
+	border-radius: 15px;
+}
+
+#sub1 {
+	color: #2d7998;;
+	font-size: 1.2rem;
+	padding-bottom: 3rem;
+	width: 70%;
+	margin: auto;
+}
+
+.btn:hover {
+	background: #4ab4df;
+	color: #eaeaea;
+	border: 3px outset #4ab4df;
+}
+
+/* Header Showcase */
+#showcase {
+	min-height: 100%;
+	text-align: center;
+}
+
+#section-b li, #section-b2 li {
+	background: rgba(255, 255, 255, 0) !important;
+}
+/* #showcase */
+.bg-image {
+	position: absolute;
+	background: 
+		linear-gradient(
+			rgba(225, 225, 225, 0) 0%, 
+			rgba(225, 225, 225, 0) 67%,
+			white 100%
+		),
+		url('https://images.pexels.com/photos/45848/kumamoto-japan-aso-cloud-45848.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 125%;
+	z-index: -1;
+	opacity: 0.2;
+}
+
+section li {
+	background: rgba(255, 255, 255, 0);
+}
+
+#section-b2 .bg-image{
+	position: absolute;
+	background:
+		linear-gradient(
+			rgba(225, 225, 225, 0) 0%, 
+			rgba(225, 225, 225, 0) 67%,
+			white 100%
+		),
+	url("https://images.pexels.com/photos/1757363/pexels-photo-1757363.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 115%;
+	z-index: -1;
+	opacity: 0.15;
+}
+
+.btn {
+	margin-bottom: 2.8rem;
+}
+
+#showcase h1 {
+	padding-top:100px;
+	padding-bottom: 0;
+	font-size: 4rem;
+	color: #88aebd;
+}
+
+#showcase .content-wrap {
+	padding:0 1.5em;
+}
+
+/*Section A */
+#section-a {
+	background: #eaeaea;
+	color: #333;
+	padding-bottom:2em; 
+}
+
+#section-a .content-wrap{
+	padding:0 1.5em;
+}
+
+/*Section B*/
+
+#section-b, #section-b2 ul {
+	padding: 2em 1em 1em;
+}
+
+#section-b ul, #section-b2 ul {
+	list-style:none;
+	margin: 0;
+	padding: 0;
+}
+
+/* ul li .card img {
+	margin: 2rem auto;
+} */
+
+#section-b li, #section-b2 li {
+	margin-bottom: 1em;
+	background:#fff;
+	color: #333;
+}
+
+.card-content {
+	padding:1.5em;
+	background: rgba(255, 255, 255, 0);
+}
+
+/*Section C*/
+
+#section-c {
+	background:#88aebd;
+	color: #475b63 ;
+	padding: 2em;
+}
+
+/* Section D boxes */
+#section-d .box{
+	padding: 2em;
+	color: #fff !important;
+	background: #2e2c2f;
+}
+
+#section-d .box:first-child {
+	background:#475b63;
+	color: #fff !important;
+}
+
+#main-footer {
+	padding:1em;
+	background: #000;
+	color:#fff;
+	text-align:center;
+}
+
+#main-footer a{
+	color:#3da3e2;
+	text-decoration: none;
+}
+
+/* Media Query*/
+@media(min-width: 700px) {
+	#showcase h1 {
+		font-size: 6rem;
+	}
+	p {
+		font-size: 1.2rem;
+	}
+	.grid{
+		display:grid;
+		grid-template-columns: 1fr repeat(2, minmax(auto, 36em)) 1fr;
+	}
+	#section-a .content-text {
+		columns: 2;
+		column-gap:2em;
+	}
+	#section-a .content-text p {
+		padding-top: 0;
+	}
+	.content-wrap, #section-b ul, #section-b2 ul {
+		grid-column:2/4;
+	}
+	#section-b ul, #section-b2 ul {
+		display:flex;
+		justify-content:space-around;
+	}
+	#section-b li, #section-b2 li{
+		width:31%;
+	}
+	#section-b ul, #section-b2 ul {
+		padding: 2em 1em 1em;
+	}
+	.box, #main-footer div{
+		grid-column:span 2;
+	}
+	#section-b2 img {
+		display: block;
+		width: 60%;
+		/* height: auto; */
+		margin: auto;
+	}
+	.content-title {
+		font-size: 4rem;
+	}
+	#sub1 {
+		font-size: 2rem;
+	}
+}
+
